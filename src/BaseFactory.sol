@@ -18,7 +18,7 @@ abstract contract BaseFactory {
     function deploy(IPoolManager poolManager, bytes32 salt) public virtual returns (address);
 
     function mineDeploy(IPoolManager poolManager) external returns (address) {
-        return deploy(poolManager,0);
+        return deploy(poolManager, 0);
     }
 
     function _computeHookAddress(IPoolManager poolManager, bytes32 salt) internal view returns (address) {
